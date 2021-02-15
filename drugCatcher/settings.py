@@ -1,20 +1,16 @@
 import os
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATES_DIRS = os.path.join(BASE_DIR, 'templates')
 
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# Obviously this would be a private repo and the secret key would remain secret in real world production env
 SECRET_KEY = 'x9yv=@vmi*ri9uwev&#$+9)-!s6lv&oc6w1syf+454wn&!ibd9'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -60,8 +56,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'drugCatcher.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -71,8 +65,6 @@ DATABASES = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -89,9 +81,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-# Internationalization
-# https://docs.djangoproject.com/en/2.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
