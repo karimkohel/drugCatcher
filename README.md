@@ -14,7 +14,7 @@
  - Request appointment page
     - [X] Title
     - [X] model for appointments
-    - [X] modelform for said model
+    - [ ] modelform for said model
       - [ ] decent look
       - [ ] info buttons with popups
     - [X] centered title (a backend dev's nightmare)

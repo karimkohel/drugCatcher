@@ -5,15 +5,15 @@ from phonenumber_field.modelfields import PhoneNumberField
 # and i did just that
 
 # Create your models here.
-class Company(models.Model):
-    name = models.CharField(max_length=150)
+class Country(models.Model):
+    name = models.CharField(max_length=60)
 
     def __str__(self):
         return self.name
 
-class Country(models.Model):
-    name = models.CharField(max_length=60)
-    comapny = models.ManyToManyField(Company)
+class Company(models.Model):
+    name = models.CharField(max_length=150)
+    country = models.ForeignKey(Country, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
