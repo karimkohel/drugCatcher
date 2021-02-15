@@ -7,9 +7,9 @@
 ## Pages
  - home page 
     - [X] base template
-    - [ ] intro text : Request an appointment with our Team now!
-    - [ ] intro video from youtube
-    - [ ] request button for appoinment request page
+    - [X] intro text : Request an appointment with our Team now!
+    - [X] intro video from youtube
+    - [X] request button for appoinment request page
 
  - Request appointment page
     - [ ] centered title (a backend dev's nightmare)
