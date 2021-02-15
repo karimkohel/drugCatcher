@@ -5,18 +5,24 @@ from phonenumber_field.modelfields import PhoneNumberField
 # and i did just that
 
 # Create your models here.
-class Country(models.Model):
-    name = models.CharField(max_length=60)
-
-    def __str__(self):
-        return self.name
-
 class Company(models.Model):
     name = models.CharField(max_length=150)
-    country = models.ForeignKey(Country, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
+
+class Country(models.Model):
+    name = models.CharField(max_length=60)
+    comapny = models.ManyToManyField(Company)
+
+    def __str__(self):
+        return self.name
+
+class Objective(models.Model):
+    Type = models.CharField(max_length=60)
+
+    def __str__(self):
+        return self.Type
 
 class Appointment(models.Model):
 
@@ -26,8 +32,8 @@ class Appointment(models.Model):
     phoneNumber = PhoneNumberField()
     country = models.ForeignKey(Country, on_delete=models.SET_NULL, null=True)
     company = models.ForeignKey(Company, on_delete=models.SET_NULL, null=True)
-
-
+    objective = models.ForeignKey(Objective, on_delete=models.SET_NULL, null=True)
+    description = models.TextField(max_length='600')
     
     def __str__(self):
         return self.firstName + " " + self.lastName

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 from .models import Appointment
 
@@ -7,12 +8,9 @@ from .models import Appointment
 def index(request):
     return render(request, 'home/index.html')
 
-def appointmentReq(request):
-    return render(request, 'home/appReq.html')
-
 # or better to do 
 
-# class CreateAppointment(CreateView):
-#     model = Appointment
-
-# and create an ajax view to change company 
+class CreateAppointment(CreateView):
+    model = Appointment
+    fields = '__all__'
+    succes_url = reverse_lazy('index') # screen3
