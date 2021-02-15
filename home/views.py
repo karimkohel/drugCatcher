@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 from .models import Appointment
+from .forms import AppointmentCreationForm
 
 # Create your views here.
 
@@ -12,5 +13,5 @@ def index(request):
 
 class CreateAppointment(CreateView):
     model = Appointment
-    fields = '__all__'
+    form_class = AppointmentCreationForm
     succes_url = reverse_lazy('index') # screen3
