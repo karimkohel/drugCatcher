@@ -12,10 +12,11 @@
     - [X] request button for appoinment request page
 
  - Request appointment page
+    - [ ] Title
+    - [ ] model for appointments
+    - [ ] modelform for said model
     - [ ] centered title (a backend dev's nightmare)
     - [ ] back button (with icon)
-    - [ ] model for appointments
-    - [ ] model form for said model
     - [ ] confirmation popup
 
  - confirmation page

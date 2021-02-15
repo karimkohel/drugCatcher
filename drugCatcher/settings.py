@@ -22,7 +22,10 @@ INSTALLED_APPS = [
 
     # Custom app
     'users.apps.UsersConfig',
-    'home.apps.HomeConfig'
+    'home.apps.HomeConfig',
+
+    # 3rd party apps
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
