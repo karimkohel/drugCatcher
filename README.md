@@ -6,7 +6,7 @@
 
 ## Pages
  - home page 
-    - [ ] base template with nav
+    - [X] base template
     - [ ] intro text : Request an appointment with our Team now!
     - [ ] intro video from youtube
     - [ ] request button for appoinment request page
