@@ -1,8 +1,7 @@
 <h1>drugCatcher</h1>
 
 ## Technology
- - Django 2.2 for the LTS 
- - Materialize CSS
+ - Django (2.2 for the LTS) 
 
 ## Pages
  - home page 
