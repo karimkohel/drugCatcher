@@ -26,9 +26,9 @@ class Objective(models.Model):
 
 class Appointment(models.Model):
 
-    firstName = models.CharField(max_length=30, help_text="First Name")
-    lastName = models.CharField(max_length=30, help_text="Last Name")
-    email = models.EmailField(help_text="Work Email Address")
+    firstName = models.CharField(max_length=30)
+    lastName = models.CharField(max_length=30)
+    email = models.EmailField()
     phoneNumber = PhoneNumberField()
     country = models.ForeignKey(Country, on_delete=models.SET_NULL, null=True)
     company = models.ForeignKey(Company, on_delete=models.SET_NULL, null=True)

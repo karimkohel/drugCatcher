@@ -8,13 +8,35 @@
     <h2 class="center">Create Appointment</h2>
 </div>
 
+<!-- data-companies-url="{% url 'home:ajaxLoadComp' %}" -->
 <div class="container">
-    <form method="post">
+    <form method="post" id="appForm" novalidate>
         {% csrf_token %}
-        {{ form }}
+        <table>
+            {{ form.as_table }}
+        </table>
         <button type="submit">Create</button>
     </form>
 </div>
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$("#id_country").change(function () {
+    var url = $("#appForm").attr("data-companies-url");
+    var countryId = $(this).val();
+
+    $.ajax({
+    url: url,
+    data: {
+        'country': countryId
+    },
+    success: function (data) {
+        $("#id_company").html(data);
+    }
+    });
+
+});
+</script> -->
 
 
 {% endblock content %}
