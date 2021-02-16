@@ -14,16 +14,16 @@
  - Request appointment page
     - [X] Title
     - [X] model for appointments
-    - [ ] modelform for said model
+    - [X] modelform for said model
       - [ ] decent look
       - [ ] info buttons with popups
     - [X] centered title (a backend dev's nightmare)
-    - [ ] back button (with icon)
-    - [ ] confirmation popup
+    - [X] back button (with icon)
+    - [X] confirmation popup
 
  - confirmation page
-    - [ ] another confirmation text for some reason
-    - [ ] back to home button
+    - [X] another confirmation text for some reason
+    - [X] back to home button
 
 ## Demo
 (Coming later...)

@@ -1,5 +1,4 @@
 {% extends 'base/base.html' %}
-{% load materializecss %}
 
 {% block content %}
 
@@ -11,7 +10,7 @@
 
 
 <div class="container">
-    <form method="post" id="appForm" data-companies-url="{% url 'home:ajaxLoadComp' %}" novalidate>
+    <form method="post" id="appForm" data-companies-url="{% url 'home:ajaxLoadComp' %}" action="{% url 'home:confirm' %}" novalidate>
         {% csrf_token %}
         <table>
             {{ form }}

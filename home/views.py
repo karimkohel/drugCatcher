@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views.generic.edit import CreateView
 from .models import Appointment, Company
 from .forms import AppointmentCreationForm
@@ -9,15 +9,21 @@ from .forms import AppointmentCreationForm
 def index(request):
     return render(request, 'home/index.html')
 
-# or better to do 
 
 class CreateAppointment(CreateView):
     model = Appointment
     form_class = AppointmentCreationForm
-    succes_url = reverse_lazy('index') # screen3
+    success_message = "Appointment was set successfully"
+    succes_url = reverse_lazy('home:confirm')
+    
+
 
 
 def load_companies(request):
     country_id = request.GET.get('country')
     companies = Company.objects.filter(country_id=country_id).order_by('name')
     return render(request, 'home/companyList.html', {'companies': companies})
+
+def confirm(request):
+    context = {'title': 'Confirm'}
+    return render(request, "home/confirm.html", context)
