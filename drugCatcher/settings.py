@@ -9,7 +9,7 @@ SECRET_KEY = 'x9yv=@vmi*ri9uwev&#$+9)-!s6lv&oc6w1syf+454wn&!ibd9'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '5e3a6b92972e.ngrok.io', 'drug-catchers.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '5e3a6b92972e.ngrok.io', 'drug-catcher.herokuapp.com']
 
 
 INSTALLED_APPS = [
