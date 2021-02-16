@@ -26,7 +26,6 @@ INSTALLED_APPS = [
 
     # 3rd party apps
     'phonenumber_field',
-    'materializecssform',
 ]
 
 MIDDLEWARE = [
