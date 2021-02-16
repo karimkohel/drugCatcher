@@ -13,7 +13,7 @@
     <form method="post" id="appForm" data-companies-url="{% url 'home:ajaxLoadComp' %}" action="{% url 'home:confirm' %}" novalidate>
         {% csrf_token %}
         <table>
-            {{ form }}
+            {{ form.as_table }}
         </table>
         <button type="submit">Create</button>
     </form>
