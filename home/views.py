@@ -17,23 +17,7 @@ class CreateAppointment(CreateView):
     succes_url = reverse_lazy('index') # screen3
 
 
-def createAppointmet(request):
-    if request.method == 'POST':
-        form = AppointmentCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('home:index')
-    else:
-        form = AppointmentCreationForm()
-
-    context = {
-        'form':form,
-        'title':"Create"
-    }
-    return render(request, 'home/createAppointment.html', context)
-
-
 def load_companies(request):
-    company_id = request.GET.get('company')
-    companies = Company.objects.filter(country_id=company_id).order_by('name')
+    country_id = request.GET.get('country')
+    companies = Company.objects.filter(country_id=country_id).order_by('name')
     return render(request, 'home/companyList.html', {'companies': companies})

@@ -9,9 +9,9 @@
     <h2 class="center">Create Appointment</h2>
 </div>
 
-<!-- data-companies-url="{% url 'home:ajaxLoadComp' %}" -->
+
 <div class="container">
-    <form method="post" id="appForm" novalidate>
+    <form method="post" id="appForm" data-companies-url="{% url 'home:ajaxLoadComp' %}" novalidate>
         {% csrf_token %}
         <table>
             {{ form }}
@@ -20,7 +20,7 @@
     </form>
 </div>
 
-<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
 $("#id_country").change(function () {
     var url = $("#appForm").attr("data-companies-url");
@@ -37,17 +37,7 @@ $("#id_country").change(function () {
     });
 
 });
-</script> -->
-<!-- 
-<script>
-    $(document).ready(function(){
-    
-      // Initialize materialize data picker
-      $('.datepicker').datepicker({'format': 'yyyy-mm-dd'});
-      $('select').formSelect();
-    
-    });
-</script> -->
+</script>
 
 
 {% endblock content %}
