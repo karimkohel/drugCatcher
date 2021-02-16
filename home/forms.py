@@ -10,7 +10,7 @@ class AppointmentCreationForm(forms.ModelForm):
 
     class Meta:
         model = Appointment
-        fields = ('firstName', 'lastName', 'email', 'phoneNumber', 'country', 'company', 'objective', 'description')
+        fields = ['firstName', 'lastName', 'email', 'phoneNumber', 'country', 'company', 'objective', 'description']
 
     # def __init__(self, *args, **kwargs):
     #     super().__init__(*args, **kwargs)
