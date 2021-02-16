@@ -15,6 +15,9 @@ class CreateAppointment(CreateView):
     form_class = AppointmentCreationForm
     success_message = "Appointment was set successfully"
     succes_url = reverse_lazy('home:confirm')
+
+    def get_success_url(self):
+        return reverse('home:confirm')
     
 
 
