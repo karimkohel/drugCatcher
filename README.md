@@ -3,6 +3,12 @@
 ## Technology
  - Django (2.2 for the LTS) 
 
+## Description
+
+Firstly i would like to take on the back-end challange + the hosting challange.
+The UI maybe not appealing but the backend is 100% functional as i am only taking on the backend challange, the same reason would be applied on the info buttons in the form.
+the email challange would have been feasible if not for an unnecessersary db update at the last minute that broke soemthing and rendered the system unusable on the free hosting service. 
+
 ## Pages
  - home page 
     - [X] base template
@@ -25,4 +31,4 @@
     - [X] back to home button
 
 ## Demo
-(Coming later...)
+https://drug-catcher.herokuapp.com
